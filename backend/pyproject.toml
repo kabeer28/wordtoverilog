@@ -1,0 +1,19 @@
+[project]
+name = "nl2verilog-backend"
+version = "0.1.0"
+description = "FastAPI backend for natural language to synthesizable Verilog generation"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn>=0.30.0",
+  "pydantic>=2.8.0",
+]
+
+[project.optional-dependencies]
+test = [
+  "pytest>=8.0.0",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"

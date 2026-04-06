@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nl2verilog.generate_request",
+  "title": "GenerateRequest",
+  "type": "object",
+  "required": ["description"],
+  "properties": {
+    "description": { "type": "string", "minLength": 1 },
+    "module_name": { "type": "string" },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "clock_name": { "type": "string" },
+        "reset_name": { "type": "string" },
+        "reset_active": { "type": "string", "enum": ["high", "low"] }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

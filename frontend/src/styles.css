@@ -1,0 +1,170 @@
+.app-shell {
+  min-height: 100vh;
+  background: #0b1020;
+  color: #e5e7eb;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header-subtitle {
+  margin: 4px 0 0;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+
+.status-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.status-chip {
+  padding: 10px 12px;
+  border: 1px solid #1f2937;
+  border-radius: 8px;
+  background: #111827;
+  font-size: 0.9rem;
+}
+
+.status-chip.ok {
+  border-color: #065f46;
+  color: #6ee7b7;
+}
+
+.status-chip.warn {
+  border-color: #92400e;
+  color: #fcd34d;
+}
+
+.status-chip.fail {
+  border-color: #7f1d1d;
+  color: #fca5a5;
+}
+
+.grid-two-pane {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.panel {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.input-field,
+.textarea-field {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  color: #e5e7eb;
+  padding: 10px;
+}
+
+.textarea-field {
+  min-height: 380px;
+  resize: vertical;
+  line-height: 1.4;
+}
+
+.controls-row {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: #fca5a5;
+  margin: 0;
+}
+
+.code-block {
+  margin: 0;
+  border-radius: 8px;
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  padding: 12px;
+  overflow-x: auto;
+  min-height: 510px;
+  font-family: "JetBrains Mono", "Fira Code", Menlo, monospace;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.tok-comment {
+  color: #6b7280;
+}
+
+.tok-keyword {
+  color: #93c5fd;
+}
+
+.tok-number {
+  color: #fca5a5;
+}
+
+.tok-symbol {
+  color: #c4b5fd;
+}
+
+.diagnostics-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.diag-error {
+  color: #fca5a5;
+}
+
+.diag-warning {
+  color: #fcd34d;
+}
+
+@media (max-width: 980px) {
+  .grid-two-pane {
+    grid-template-columns: 1fr;
+  }
+}

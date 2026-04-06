@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "nl2verilog.generate_response",
+  "title": "GenerateResponse",
+  "type": "object",
+  "required": ["verilog_code", "metadata", "diagnostics"],
+  "properties": {
+    "verilog_code": { "type": "string" },
+    "metadata": {
+      "type": "object",
+      "required": ["prompt_version", "generator_name"],
+      "properties": {
+        "prompt_version": { "type": "string" },
+        "generator_name": { "type": "string" }
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "severity", "message"],
+        "properties": {
+          "source": { "type": "string" },
+          "severity": { "type": "string", "enum": ["info", "warning", "error"] },
+          "message": { "type": "string" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "description": "Create a 2-input AND gate with inputs a and b and output y.",
+  "module_name": "and2",
+  "expected_properties": [
+    "contains module and2",
+    "contains assign y = a & b",
+    "contains endmodule",
+    "contains no initial block"
+  ]
+}
